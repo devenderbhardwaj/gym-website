@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(40, 48, 60);
+    color: white;
+}
+h1, h2, h3, h4 {
+    text-transform: capitalize;
+}
+nav {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 1.5vw;
+    overflow: visible;
+    z-index: 1;
+    background-color: rgb(40, 48, 60);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s;
+}
+nav a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 1.1em;
+}
+nav a:hover {
+    background-color: rgb(60, 68, 80);
+}
+#hamburger {
+    display: none;
+    border: none;
+    flex-flow: column nowrap;
+    background-color: rgb(40, 48, 60);
+    padding: 12px;
+    border-radius: 10px;
+    gap: 8px;
+}
+#hamburger div {
+    width: 37px;
+    height: 2px;
+    background-color: white;
+}
+
+#hamburger:hover {
+    background-color: rgb(60, 68, 80);
+}
+#leftnav {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+#centernav {
+    width: 45%;
+    min-width: 550px;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    z-index: 1;
+}
+#rightnav {
+    width: 10%;
+    min-width: 130px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#rightnav img{
+    height: 35px;
+
+}
+
+@media only screen and (max-width:1000px){
+   #hamburger {
+    display: flex;
+   }
+   #centernav {
+    display: none;
+    /* display: flex; */
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    min-width: 180px;
+    width: 30%;
+   }
+   #centernav a{
+    background-color: rgb(40,48,60);
+    color: white;
+    width: 100%;
+    border-radius: 0;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+   }
+   #centernav a:hover {
+    background-color: rgb(60, 68, 80);
+   }
+   #centernav a:active {
+    background-color: black;
+   }
+}
+
+@media only screen and (max-width:680px) {
+    #hamburger {
+        gap: 6px;
+        padding: 8px;
+    }
+    #hamburger img {
+        height: 30px;
+    }
+    #leftnav {
+        font-size: 1em;
+        text-transform: capitalize;
+    }
+    #rightnav a {
+        height: 45px;
+    }
+    #rightnav a{ 
+        padding: 5px;
+    }
+    #rightnav {
+        min-width: fit-content;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    #hamburger {display:flex;}
+    #leftnav {
+        display: none;
+    }
+}

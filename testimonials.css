@@ -1,0 +1,101 @@
+#pretestimonials {
+    margin-top: 100px;
+    padding: 2vw 5vw 0;
+    font-size: 36px;
+}
+#testimonials {
+    position: relative;
+    padding: 2vw;
+}
+.testimonial {
+    padding: 1vw;
+    height: 500px;
+    display: none;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.7s;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.testimonial .img-container {
+    max-height: 500px;
+    height: 90%;
+    width: 45%;
+    overflow:hidden;
+}
+.img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 60% 30%;
+}
+.what {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+    overflow: auto;
+}
+#testimonials h3 {
+    text-transform: capitalize;
+    font-size: 32px;
+}
+.desc  {
+    font-size: 28px;
+}
+.name {
+    text-align: center;
+    font-size: 28px;
+}
+#dots {
+    display: flex;
+    /* position: absolute; */
+    bottom: 0px;
+    left: 50%;
+    padding: 15px 0;
+    justify-content: center;
+    gap: 20px;
+    flex-flow: row nowrap;
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+    /* background-color: white; */
+}
+.activedot {
+    background-color: black;
+    transform: scale(1.3);
+}
+
+@media only screen and (max-width:670px) {
+    #pretestimonials {
+        font-size: 24px;
+    }
+    #testimonials {
+        height: auto;
+    }
+    .testimonial {
+        height: auto;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .testimonial .img-container {
+        width: 95%;
+        height: 280px;
+        
+    }
+    .what {
+        width: 95%;
+        height: 280px;
+    }
+    .desc {
+        font-size: 20px;
+    }
+    .name {font-size: 20px;text-align: left;}
+    
+
+}

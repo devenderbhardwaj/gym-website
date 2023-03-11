@@ -1,0 +1,95 @@
+#packages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2vw;
+    justify-content:space-around;
+    align-items: center;
+    gap: 3vw 1vw;
+    margin-top: 14vh;
+}
+#packageshead {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6vh;
+    font-size: 2em;
+    
+}
+.package {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 31%;
+    min-width: 310px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 30px;
+    height: 600px;
+}
+
+
+.package h2 {    
+    margin: 7px;
+}
+.package ul {
+    margin-top: 5px;
+    list-style-position: inside;
+}
+
+.package ul li {
+    list-style-type: disc;
+    margin: 8px 3px;
+}
+.package hr {
+    margin: 10px 0;
+}
+.package button {
+    display: block;
+    margin: auto;
+    margin-bottom: 2vh;
+    padding: 5px;
+    border-radius: 15px;
+    color: white;
+    font-size: large;
+    background-color:rgb(64, 55, 164);
+    width: 200px;
+}
+
+.package button:hover {
+    background-color: rgb(34, 25, 134);
+}
+.gray {
+    color: rgb(128, 128, 128);
+}
+
+.terms {
+    font-size: small;
+    margin: 0 auto;
+}
+.package button:active {
+    transform: scale(0.95);
+}
+
+@media only screen and (max-width:1000px) {
+    .package {
+        width: 44%;
+    }
+}
+@media only screen and (max-width:670px) {
+    #packageshead h2 {
+        font-size: 40px;
+    }
+    .package {
+        width: 55%;
+    }
+}
+@media only screen and (max-width:340px) {
+    .package {
+        min-width: 90vw;
+        width: 90vw;
+        height: 700px;
+    }
+    .package ul {
+        padding-inline-start: 0;
+    }
+}

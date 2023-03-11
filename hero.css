@@ -1,0 +1,45 @@
+#hero {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    height: calc(100vh - 90px);
+    background-image: url(Images/hero2.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+#hero h2 {
+    text-transform: uppercase;
+    font-size: 2.2em;
+}
+#hero p {
+    font-size: 1.5rem;
+}
+
+#herocon {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 15px;
+    position: absolute;
+    width: 480px;
+    top: 50%;
+    left: 5%;
+    transform: translate(0,-50%);
+    
+}
+
+
+@media only screen and (max-width:680px) {
+    #herocon {
+        width: 90%;
+        top: auto;
+        bottom: 10%;
+        transform: translate(0,0);
+    }
+    #hero h2 {
+        font-size: 1.8em;
+    }
+    #hero p {
+        font-size: 1.2em;
+    }
+}
